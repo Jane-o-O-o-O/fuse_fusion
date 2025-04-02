@@ -1,0 +1,19 @@
+# Argoverse-HD dataset (ring-front-center camera) http://www.cs.cmu.edu/~mengtial/proj/streaming/
+# Train command: python train.py --data argoverse_hd.yaml
+# Default dataset location is next to YOLOv5:
+#   /parent_folder
+#     /argoverse
+#     /yolov5
+
+# download command/URL (optional)
+
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: ./single-m/images/train  # 6471 images
+val: ./single-m/images/val  # 548 images
+test: ./single-m/images/test  # 1610 images
+# number of classes
+nc: 4
+
+# class names
+names: [ 'yacht',  'speedboat',  'sailboat',  'fishboat']
