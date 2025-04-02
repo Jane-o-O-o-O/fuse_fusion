@@ -55,6 +55,7 @@ The main execution files include `train`, `test`, and `detect` for training, met
 ## Dataset Preparation
 
 You can get the dataset from here：https://drive.google.com/file/d/11PrU-Lq9jme0e8Lmh1SzNy5Uh2vqTk16/view?usp=sharing
+
 Navigate to the `multispectral-object-detection-main/fuse_dataset` directory:
 - Place visible light images in `images/rgb` and their corresponding `.txt` annotation files in `labels/rgb`.
 - Place infrared light images in `images/ir` and their corresponding `.txt` annotation files in `labels/ir`.
