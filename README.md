@@ -54,6 +54,7 @@ The main execution files include `train`, `test`, and `detect` for training, met
 
 ## Dataset Preparation
 
+You can get the dataset from here：https://drive.google.com/file/d/11PrU-Lq9jme0e8Lmh1SzNy5Uh2vqTk16/view?usp=sharing
 Navigate to the `multispectral-object-detection-main/fuse_dataset` directory:
 - Place visible light images in `images/rgb` and their corresponding `.txt` annotation files in `labels/rgb`.
 - Place infrared light images in `images/ir` and their corresponding `.txt` annotation files in `labels/ir`.
@@ -115,6 +116,7 @@ Training outputs will be saved in `multispectral-object-detection-main/runs/fusi
 
 ## Testing (Adjust parameters as needed)
 
+Here are the models available for testing：https://drive.google.com/drive/folders/1-nl5_3-8VaBfWElj6Ge_MbWLlqsEh48B?usp=sharing
 ```bash
 python detect_fusion.py --weights ./runs/fusion/exp4/weights/best.pt \
 --source1 square_padding/images/rgb/test --source2 square_padding/images/ir/test
