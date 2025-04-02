@@ -1,4 +1,3 @@
-```markdown
 # Installation
 
 ## Requirements
@@ -22,11 +21,11 @@ conda activate cross
 conda install pytorch=1.11.0 torchvision cudatoolkit=11.3 -c pytorch -y
 ```
 
-### Clone the XXX repository.
+### Clone the fuse_fusion repository.
 
 ```bash
-git clone https://github.com/xxx
-cd xxx
+git clone https://github.com/Jane-o-O-o-O/fuse_fusion.git
+cd fuse_fusion
 ```
 
 ### Install dependencies (environment configurations may require fine-tuning).
@@ -56,7 +55,7 @@ The main execution files include `train`, `test`, and `detect` for training, met
 
 You can get the dataset from here：https://drive.google.com/file/d/11PrU-Lq9jme0e8Lmh1SzNy5Uh2vqTk16/view?usp=sharing
 
-Navigate to the `multispectral-object-detection-main/fuse_dataset` directory:
+Navigate to the `fuse_fusion/fuse_dataset` directory:
 - Place visible light images in `images/rgb` and their corresponding `.txt` annotation files in `labels/rgb`.
 - Place infrared light images in `images/ir` and their corresponding `.txt` annotation files in `labels/ir`.
 
@@ -96,14 +95,14 @@ fuse_dataset/
             └── 1002.txt
 ```
 
-Dataset configuration files are located in `multispectral-object-detection-main/data/multispectral`:
+Dataset configuration files are located in `fuse_fusion/data/multispectral`:
 - `FLIR_aligned.yaml`: Configuration for dual-modality datasets.
 - `rgb.yaml`: Configuration for single-modality datasets. Modify the dataset paths and category names according to your data structure.
 
 ## Training the Model (Adjust parameters as needed)
 
 ### Update Dataset Paths and Categories
-Modify the YAML files in `multispectral-object-detection-main/data/multispectral` to reflect your dataset paths and categories.
+Modify the YAML files in `fuse_fusion/data/multispectral` to reflect your dataset paths and categories.
 
 ### Execute Training
 
@@ -113,7 +112,7 @@ python train_fusion.py --data ./data/multispectral/FLIR_aligned.yaml \
 --epochs 100 --batch-size 4
 ```
 
-Training outputs will be saved in `multispectral-object-detection-main/runs/fusion`.
+Training outputs will be saved in `fuse_fusion/runs/fusion`.
 
 ## Testing (Adjust parameters as needed)
 
@@ -123,5 +122,5 @@ python detect_fusion.py --weights ./runs/fusion/exp4/weights/best.pt \
 --source1 square_padding/images/rgb/test --source2 square_padding/images/ir/test
 ```
 
-Detection results will be saved in `multispectral-object-detection-main/runs/two_detect`.
+Detection results will be saved in `fuse_fusion/runs/two_detect`.
 ```
